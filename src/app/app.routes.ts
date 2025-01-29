@@ -1,10 +1,6 @@
 import { Routes } from '@angular/router';
+import { UserListComponent } from './user/user-list/user-list.component';
 
 export const appRoutes: Routes = [
-  {
-    path: 'users',
-    loadChildren: () =>
-      import('./user/user.module').then((m) => m.UserModule), // Lazy loading
-  },
-  { path: '', redirectTo: 'users', pathMatch: 'full' }, // Route par défaut
+  { path: '', component: UserListComponent }, // Route par défaut
 ];
